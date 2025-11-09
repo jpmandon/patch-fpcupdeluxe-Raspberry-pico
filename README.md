@@ -1,5 +1,5 @@
 # patch-fpcupdeluxe-Raspberry-pico
-This patch solve the problem os sysutils when fpc is installed with fpcupdeluxe.
+This patch solve the problem of sysutils when fpc is installed with fpcupdeluxe.
 To apply this patch:
 copy the files embedded_sysutils.path and compilertl.sh in folder fpcupdeluxe/fpcsrc/rtl/embedded
 then to apply the patch and recompile the rtl for arm-embedded:
