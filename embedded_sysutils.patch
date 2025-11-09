@@ -1,0 +1,16 @@
+--- ../objpas/sysutils/sysutils.inc	2025-11-09 12:25:06.700701859 +0100
++++ ../objpas/sysutils/newsysutils.inc	2025-11-09 12:25:54.876461813 +0100
+@@ -1267,10 +1267,13 @@
+ {$IFDEF HAS_OSVERSION}
+   InitOSVersion;
+ {$ELSE}
++if FPlatform<>pFembedded then
++ begin
+   WriteStr(S,GetCompiledPlatform);
+   FName:=Copy(S,3);
+   WriteStr(S,GetCompiledArchitecture);
+   FFull:=Copy(S,3)+'-'+FName;    
++ end;
+ {$ENDIF}
+ end;
+ 
